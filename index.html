@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Victor Murega | Software Developer</title>
+  <meta name="description" content="Victor Murega - Computing Science student at Griffith College Dublin. Java, full-stack web and SQL.">
+  <style>
+    :root {
+      --bg: #0f172a;
+      --panel: #111c33;
+      --text: #e2e8f0;
+      --muted: #94a3b8;
+      --accent: #38bdf8;
+      --border: #1e293b;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    nav {
+      position: sticky; top: 0;
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 1rem 8%;
+      background: rgba(15, 23, 42, 0.92);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(6px);
+    }
+    nav .logo { font-weight: 700; color: var(--text); }
+    nav ul { list-style: none; display: flex; gap: 1.5rem; }
+    nav ul a { color: var(--muted); }
+    nav ul a:hover { color: var(--accent); text-decoration: none; }
+    section { padding: 5rem 8%; max-width: 1100px; margin: 0 auto; }
+    .hero { min-height: 80vh; display: flex; flex-direction: column; justify-content: center; }
+    .hero p.hi { color: var(--accent); font-family: monospace; margin-bottom: 0.5rem; }
+    .hero h1 { font-size: clamp(2.5rem, 6vw, 4rem); line-height: 1.1; }
+    .hero h2 { font-size: clamp(1.3rem, 3vw, 2rem); color: var(--muted); font-weight: 500; margin: 0.5rem 0 1.5rem; }
+    .hero p.lead { max-width: 600px; color: var(--muted); }
+    .btns { margin-top: 2rem; display: flex; gap: 1rem; flex-wrap: wrap; }
+    .btn {
+      padding: 0.75rem 1.5rem; border-radius: 8px; font-weight: 600;
+      border: 1px solid var(--accent);
+    }
+    .btn.primary { background: var(--accent); color: var(--bg); }
+    .btn:hover { text-decoration: none; opacity: 0.9; }
+    h3.section-title { font-size: 1.8rem; margin-bottom: 1.5rem; }
+    h3.section-title::after {
+      content: ""; display: block; width: 60px; height: 3px;
+      background: var(--accent); margin-top: 0.5rem;
+    }
+    .about p { color: var(--muted); max-width: 750px; margin-bottom: 1rem; }
+    .skills { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+    .skills span {
+      padding: 0.4rem 0.9rem; border-radius: 999px;
+      background: var(--panel); border: 1px solid var(--border); font-size: 0.95rem;
+    }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
+    .card {
+      background: var(--panel); border: 1px solid var(--border);
+      border-radius: 12px; padding: 1.5rem;
+      transition: transform 0.2s, border-color 0.2s;
+    }
+    .card:hover { transform: translateY(-4px); border-color: var(--accent); }
+    .card h4 { font-size: 1.2rem; margin-bottom: 0.5rem; }
+    .card p { color: var(--muted); font-size: 0.95rem; margin-bottom: 1rem; }
+    .card .tags { font-family: monospace; font-size: 0.85rem; color: var(--accent); }
+    .card .status { display: inline-block; margin-top: 0.75rem; font-size: 0.8rem; color: var(--muted); }
+    .contact p { color: var(--muted); margin-bottom: 1.5rem; }
+    footer { text-align: center; padding: 2rem; color: var(--muted); font-size: 0.85rem; border-top: 1px solid var(--border); }
+    @media (max-width: 600px) { nav ul { gap: 1rem; font-size: 0.9rem; } }
+  </style>
+</head>
+<body>
+  <nav>
+    <a class="logo" href="#">VM.</a>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section class="hero">
+    <p class="hi">Hi, my name is</p>
+    <h1>Victor Murega.</h1>
+    <h2>I build software for the web.</h2>
+    <p class="lead">
+      Computing Science student at Griffith College Dublin, building full-stack web and mobile apps
+      backed by SQL databases, with a focus on clean, object-oriented design in Java.
+    </p>
+    <div class="btns">
+      <a class="btn primary" href="#projects">See my projects</a>
+      <a class="btn" href="https://www.linkedin.com/in/victor-murega" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <h3 class="section-title">About me</h3>
+    <p>
+      I'm a second-year BSc (Hons) Computing Science student in Dublin. I enjoy turning ideas into
+      working products, from the interface people click on to the database underneath it.
+    </p>
+    <p>
+      I'm most interested in the data and systems side of software: probability and statistics,
+      algorithms, operating systems and system design. I'm currently looking for software
+      engineering internships.
+    </p>
+    <div class="skills">
+      <span>Java</span>
+      <span>JavaScript</span>
+      <span>HTML &amp; CSS</span>
+      <span>SQL / MySQL</span>
+      <span>Object-Oriented Design</span>
+      <span>UML</span>
+      <span>Git &amp; GitHub</span>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h3 class="section-title">Projects</h3>
+    <div class="grid">
+      <div class="card">
+        <h4>Portfolio Website</h4>
+        <p>This site: a responsive, single-page portfolio hosted on GitHub Pages.</p>
+        <div class="tags">HTML · CSS · JavaScript</div>
+        <a class="status" href="https://github.com/murega-hub/murega-hub.github.io" target="_blank" rel="noopener">View source →</a>
+      </div>
+      <div class="card">
+        <h4>Job Application Tracker</h4>
+        <p>A full-stack app to track job and internship applications, statuses and follow-ups.</p>
+        <div class="tags">Java · MySQL · REST</div>
+        <span class="status">🚧 In progress</span>
+      </div>
+      <div class="card">
+        <h4>Premier League Stats Analyser</h4>
+        <p>Data analysis of match results and player stats, with charts and win-probability models.</p>
+        <div class="tags">Python · pandas · Statistics</div>
+        <span class="status">🚧 Coming soon</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h3 class="section-title">Get in touch</h3>
+    <p>Open to internships, collaborations and a good tech conversation.</p>
+    <div class="btns">
+      <a class="btn primary" href="https://www.linkedin.com/in/victor-murega" target="_blank" rel="noopener">Message me on LinkedIn</a>
+      <a class="btn" href="https://github.com/murega-hub" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </section>
+
+  <footer>
+    © <span id="year"></span> Victor Murega
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
